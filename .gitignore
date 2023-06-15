@@ -1,0 +1,26 @@
+src/*.exe
+src/PVCC
+src/PVCCd
+src/test_PVCC
+src/build.h
+.*.swp
+*.*~*
+*.bak
+*.rej
+*.orig
+*.o
+*.patch
+.PVCC
+#compilation and Qt preprocessor part
+.qmake.stash
+Makefile
+PVCC-qt
+#resources cpp
+qrc_*.cpp
+#qt creator
+*.pro.user
+#mac specific
+.DS_Store
+build
+
+!src/leveldb/Makefile
