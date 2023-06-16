@@ -519,7 +519,7 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue)
 {
     // Define values
     int64_t  ret2 = 0;
-    if(nHeight > 0) {
+    if(nHeight > 300) {
         ret2 = (70 * COIN);
     }
     return ret2;
