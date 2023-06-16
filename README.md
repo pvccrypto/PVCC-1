@@ -10,7 +10,7 @@ PVCC is a blockchain project
 ### Blockchain Technology
 The PVCC [PVCC] Blockchain is an experimental smart contract platform that enables 
 instant payments to anyone, anywhere in the world in a private, secure manner. 
-PVCC [PVCC] uses peer-to-peer blockchain technology developed by CryptoCoderz and SaltineChips to operate
+PVCC [PVCC] uses peer-to-peer blockchain technology to operate
 with no central authority: managing transactions, execution of contracts, and 
 issuing money are carried out collectively by the network.
 
