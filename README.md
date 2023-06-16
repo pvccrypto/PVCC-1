@@ -104,6 +104,7 @@ port=23003
 rpcconnect=127.0.0.1
 rpcallowip=127.0.0.1
 addnode=45.56.105.176:23003
+addnode=162.0.216.75:23003
 CONFIG
 chmod 700 ~/.PVCC/PVCC.conf; chmod 700 ~/.PVCC; ls -la ~/.PVCC
 ```
