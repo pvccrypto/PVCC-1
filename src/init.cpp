@@ -305,9 +305,6 @@ std::string HelpMessage()
     strUsage += "  -demipeerlimit=<n> " + _("Allow/Deny blocks from peers using legacy clients/wallets, (0-1, default: 0") + "\n";
     strUsage += "  -demireorgtype=<n> " + _("Allow/Deny reorganize requests from peers as well as Demi-nodes, (0-1, default: 0") + "\n";
 
-    strUsage += "\n" + _("Pubkey-Alias-Service feature options:") + "\n";
-    strUsage += "  -paservice=<n> " + _("Toggle Pubkey-Alias-Service features on/off, (0-1, default: 0") + "\n";
-
     return strUsage;
 }
 
@@ -1000,19 +997,6 @@ bool AppInit2(boost::thread_group& threadGroup)
 
     LogPrintf("Loaded %i addresses from peers.dat  %dms\n",
            addrman.size(), GetTimeMillis() - nStart);
-
-    // ********************************************************* Step 10.6: startup pubkey alias service
-
-    // Check for Pubkey Alias Service toggle
-    uiInterface.InitMessage(_("Checking Pubkey-Alias-Service feature toggle..."));
-    fPubkeyAliasService = GetBoolArg("-paservice", false);
-    LogPrintf("Checking for Pubkey-Alias-Service feature toggle...\n");
-    if(fPubkeyAliasService) {
-        LogPrintf("Continuing with Pubkey-Alias-Service ENABLED\n");
-    } else {
-        // Pubkey-Alias-Service disabled
-        LogPrintf("Continuing with Pubkey-Alias-Service DISABLED\n");
-    }
 
     // ********************************************************* Step 11: start node
 

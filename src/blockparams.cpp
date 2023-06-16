@@ -491,14 +491,14 @@ int64_t GetProofOfStakeReward(const CBlockIndex* pindexPrev, int64_t nCoinAge, i
 {
     int64_t nSubsidy = nBlockStandardReward; // PoS Staking - pindexPrev is info from the last block, and -> means to get specific info from that block. Getblocktime is the epoch time of that block.
 
+    if(pindexPrev->nHeight+1 < 300) {// No payout during chain startup
+        nSubsidy = 0;
+    }
+
     if(pindexPrev->nHeight+1 > nReservePhaseStart) { // If, all 100 blocks of the premine are not done, then next blocks have premine value
         if(pindexBest->nMoneySupply < (nBlockRewardReserve * 100)) {
             nSubsidy = nBlockRewardReserve;
         }
-    }
-
-    if(pindexPrev->nHeight+1 < 300) {// No payout during chain startup
-        nSubsidy = 0;
     }
 
     // hardCap v2.1
