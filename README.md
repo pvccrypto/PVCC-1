@@ -90,7 +90,7 @@ cd ~; cd ~/PVCC/src; chmod a+x obj; chmod a+x leveldb/build_detect_platform; chm
 
 ### Create config file (for daemon, DO NOT USE FOR QT)
 ```
-cd ~; sudo ufw allow 20995/tcp; sudo ufw allow 20925/tcp; sudo ufw allow 22/tcp; sudo mkdir ~/.PVCC; cat << "CONFIG" >> ~/.PVCC/PVCC.conf
+cd ~; sudo ufw allow 23003/tcp; sudo ufw allow 23004/tcp; sudo ufw allow 22/tcp; sudo mkdir ~/.PVCC; cat << "CONFIG" >> ~/.PVCC/PVCC.conf
 listen=1
 server=1
 daemon=1
@@ -99,11 +99,11 @@ demimaxdepth=200
 testnet=0
 rpcuser=PVCCrpcuser
 rpcpassword=SomeCrazyVeryVerySecurePasswordHere
-rpcport=20925
-port=20995
+rpcport=23004
+port=23003
 rpcconnect=127.0.0.1
 rpcallowip=127.0.0.1
-addnode=127.0.0.1:9999
+addnode=45.56.105.176:23003
 CONFIG
 chmod 700 ~/.PVCC/PVCC.conf; chmod 700 ~/.PVCC; ls -la ~/.PVCC
 ```
