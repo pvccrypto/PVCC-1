@@ -16,18 +16,18 @@ static const unsigned int timeTestNetGenesis = 1686822382;
 /** Genesis RegNet Start Time */
 static const unsigned int timeRegNetGenesis = 1686822390;
 /** Genesis Nonce Mainnet*/
-static const unsigned int nNonceMain = 81619;
+static const unsigned int nNonceMain = 213440;
 /** Genesis Nonce Testnet */
-static const unsigned int nNonceTest = 37271;
+static const unsigned int nNonceTest = 14567;
 /** Genesis Nonce Regnet */
 static const unsigned int nNonceReg = 8;
 /** Main Net Genesis Block */
-static const uint256 nGenesisBlock("0x00003e75511f03ddd2662091944fc5e4f11207527e5f895182808faa3ed47b03");
+static const uint256 nGenesisBlock("0x000037be2875d2a8bd68ac77efb3772b5b0b5f8b255981f28137e028619081da");
 /** Test Net Genesis Block */
-static const uint256 hashTestNetGenesisBlock("0x00017f779301052f364007baa8e9678ec9411867abbf6144b3dc8793f6619dc0");
+static const uint256 hashTestNetGenesisBlock("0x00014b980c37696a0d0387f98cae81594f64c34d10a5e5d2a3ec4f62c44a344d");
 /** Reg Net Genesis Block */
-static const uint256 hashRegNetGenesisBlock("0x6f210609569a3910d973e3b261381b3845689d3c706ea975809a45e1ca31ad7f");
+static const uint256 hashRegNetGenesisBlock("0xa69b52facdc86b74eb541f8e8952226537d4e748d9a6c9dc6715a56c3b236535");
 /** Genesis Merkleroot */
-static const uint256 nGenesisMerkle("0x2d5345deef33bd51baf87f36d4003fbba17099734f3137035a36924c4c5f1059");
+static const uint256 nGenesisMerkle("0x12175adc21102329b46ae8595182ac91ccbd0d9169cd44f3904d93c890c35350");
 
 #endif // BITCOIN_GENESIS_H

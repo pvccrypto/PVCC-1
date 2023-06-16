@@ -65,7 +65,7 @@ public:
         vout.resize(1);
         vout[0].nValue = 1 * COIN;
         vout[0].SetEmpty();
-        CTransaction txNew(1, 1658711582, vin, vout, 0);
+        CTransaction txNew(1, 1686822379, vin, vout, 0);
         genesis.vtx.push_back(txNew);
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
@@ -77,10 +77,10 @@ public:
         /** Genesis Block MainNet */
         /*
             Hashed MainNet Genesis Block Output
-            block.hashMerkleRoot == 2d5345deef33bd51baf87f36d4003fbba17099734f3137035a36924c4c5f1059
+            block.hashMerkleRoot == 12175adc21102329b46ae8595182ac91ccbd0d9169cd44f3904d93c890c35350
             block.nTime = 1686822379
-            block.nNonce = 81619
-            block.GetHash = 00003e75511f03ddd2662091944fc5e4f11207527e5f895182808faa3ed47b03
+            block.nNonce = 213440
+            block.GetHash = 000037be2875d2a8bd68ac77efb3772b5b0b5f8b255981f28137e028619081da
         */
 
         hashGenesisBlock = genesis.GetHash();
@@ -144,10 +144,10 @@ public:
         /** Genesis Block TestNet */
         /*
             Hashed TestNet Genesis Block Output
-            block.hashMerkleRoot == 2d5345deef33bd51baf87f36d4003fbba17099734f3137035a36924c4c5f1059
+            block.hashMerkleRoot == 12175adc21102329b46ae8595182ac91ccbd0d9169cd44f3904d93c890c35350
             block.nTime = 1686822382
-            block.nNonce = 37271
-            block.GetHash = 00017f779301052f364007baa8e9678ec9411867abbf6144b3dc8793f6619dc0
+            block.nNonce = 14567
+            block.GetHash = 00014b980c37696a0d0387f98cae81594f64c34d10a5e5d2a3ec4f62c44a344d
         */
 
         hashGenesisBlock = genesis.GetHash();
@@ -190,10 +190,10 @@ public:
         /** Genesis Block RegNet */
         /*
             Hashed RegNet Genesis Block Output
-            block.hashMerkleRoot == 2d5345deef33bd51baf87f36d4003fbba17099734f3137035a36924c4c5f1059
+            block.hashMerkleRoot == 12175adc21102329b46ae8595182ac91ccbd0d9169cd44f3904d93c890c35350
             block.nTime = 1686822390
             block.nNonce = 8
-            block.GetHash = 6f210609569a3910d973e3b261381b3845689d3c706ea975809a45e1ca31ad7f
+            block.GetHash = a69b52facdc86b74eb541f8e8952226537d4e748d9a6c9dc6715a56c3b236535
         */
 
         assert(hashGenesisBlock == hashRegNetGenesisBlock);
