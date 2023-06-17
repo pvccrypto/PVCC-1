@@ -49,7 +49,6 @@ General Specs
 	MasterNode Reward: 70 PVCC
 	MasterNode Collateral: 500,000 PVCC
 	Maximum Coin Count: 50 Billion PVCC
-	Premine Coin Count: 45 Billion PVCC
 	Port: 23003
 	RPC Port: 23004
 
