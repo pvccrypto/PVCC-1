@@ -467,6 +467,10 @@ int64_t GetProofOfWorkReward(int nHeight, int64_t nFees)
     // No PoW payout besides premine
     int64_t nSubsidy = 0;
 
+    if(nHeight >= Params().NewStartPoWBlockTime()) {
+        nSubsidy = nBlockStandardReward;
+    }
+
     if(nHeight > nReservePhaseStart) {
         if(pindexBest->nMoneySupply < (nBlockRewardReserve * 100)) {
             nSubsidy = nBlockRewardReserve;
