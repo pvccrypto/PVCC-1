@@ -276,7 +276,9 @@ Value getworkex(const Array& params, bool fHelp)
         throw JSONRPCError(-10, "PVCC is downloading blocks...");
 
     if (pindexBest->nHeight >= Params().EndPoWBlock()){
-        throw JSONRPCError(RPC_MISC_ERROR, "No more PoW blocks");
+        if (GetTime() < Params().NewStartPoWBlockTime()) {
+            throw JSONRPCError(RPC_MISC_ERROR, "No current PoW blocks");
+        }
     }
 
     typedef map<uint256, pair<CBlock*, CScript> > mapNewBlock_t;
@@ -411,7 +413,9 @@ Value getwork(const Array& params, bool fHelp)
         throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "PVCC is downloading blocks...");
 
     if (pindexBest->nHeight >= Params().EndPoWBlock()){
-        throw JSONRPCError(RPC_MISC_ERROR, "No more PoW blocks");
+        if (GetTime() < Params().NewStartPoWBlockTime()) {
+            throw JSONRPCError(RPC_MISC_ERROR, "No current PoW blocks");
+        }
     }
 
     typedef map<uint256, pair<CBlock*, CScript> > mapNewBlock_t;
@@ -564,7 +568,9 @@ Value getblocktemplate(const Array& params, bool fHelp)
         throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "PVCC is downloading blocks...");
 
     if (pindexBest->nHeight >= Params().EndPoWBlock()){
-        throw JSONRPCError(RPC_MISC_ERROR, "No more PoW blocks");
+        if (GetTime() < Params().NewStartPoWBlockTime()) {
+            throw JSONRPCError(RPC_MISC_ERROR, "No current PoW blocks");
+        }
     }
 
     // Update block

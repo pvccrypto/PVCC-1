@@ -2733,7 +2733,9 @@ bool CBlock::AcceptBlock()
     uint256 hashProof;
     if (IsProofOfWork()) {
         if (nHeight > Params().EndPoWBlock()){
-            return DoS(100, error("AcceptBlock() : reject proof-of-work at height %d", nHeight));
+            if (nHeight < Params().NewStartPoWBlockTime()) {
+                return DoS(100, error("AcceptBlock() : reject proof-of-work at height %d", nHeight));
+            }
         } else {
             // PoW is checked in CheckBlock()
             if (IsProofOfWork())

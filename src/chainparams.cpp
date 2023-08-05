@@ -100,6 +100,7 @@ public:
         nPoolMaxTransactions = 9;
         strMNenginePoolDummyAddress = "pLKnRQZ5DYzRPF4S9kDAoapdrS3XTVj6qb";
         nEndPoWBlock = 500;
+        nNewStartPoWBlockTime = 1691384400;
         nStartPoSBlock = 1;
     }
 
