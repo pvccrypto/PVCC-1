@@ -105,6 +105,13 @@ rpcallowip=127.0.0.1
 addnode=45.56.105.176:23003
 addnode=162.0.216.75:23003
 addnode=162.0.236.77:23003
+addnode=172.92.226.137:23003
+addnode=18.188.254.20:23003
+addnode=212.64.216.137:23003
+addnode=24.113.1.62:23003
+addnode=5.75.159.59:23003
+addnode=62.171.132.112:23003
+addnode=84.247.173.139:23003
 CONFIG
 chmod 700 ~/.PVCC/PVCC.conf; chmod 700 ~/.PVCC; ls -la ~/.PVCC
 ```
