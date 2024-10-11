@@ -112,6 +112,7 @@ addnode=24.113.1.62:23003
 addnode=5.75.159.59:23003
 addnode=62.171.132.112:23003
 addnode=84.247.173.139:23003
+addnode=3.134.27.184:23003
 CONFIG
 chmod 700 ~/.PVCC/PVCC.conf; chmod 700 ~/.PVCC; ls -la ~/.PVCC
 ```
